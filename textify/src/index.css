@@ -1,0 +1,27 @@
+body {
+  font-family: 'Teachers', serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1 {
+  font-family: 'Teachers', serif;
+  font-weight: 700;
+}
+
+.navbar-brand {
+  font-family: 'Teachers', serif;
+  font-size: 1.25rem;
+}
+
+textarea {
+  font-family: 'Teachers', serif;
+  font-size: 1rem;
+  color: #444;
+}
+
+button {
+  font-family: 'Teachers', serif;
+  font-weight: 400;
+  color: #fff;
+}
