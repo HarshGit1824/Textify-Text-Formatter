@@ -8,21 +8,20 @@ import React, { useState } from 'react';
 
 
 function App() {
-  const [mode, setMode] = useState('dark');  // whether the dark mode is enable or not
+  const [mode, setMode] = useState('light');  // whether the dark mode is enable or not
 
   const toggleMode = ()=>{
     if(mode === 'light'){
-      setMode = 'dark'
+      setMode('dark');
     }
     else{
-      setMode = 'light'
+      setMode('light');
     }
-  }
+  } 
   return (
     <>
 
-      <Navbar title="TEXTIFY📝" home='Home' aboutText="About Textify" mode={mode}/>
-      
+      <Navbar title="TEXTIFY📝" home='Home' aboutText="About Textify" mode={mode} toggleMode={toggleMode}/>
       
       <div className="container my-3">
       <TextForm heading="Enter your text and select the case you want to convert it to."/>
