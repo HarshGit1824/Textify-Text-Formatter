@@ -28,11 +28,21 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#0B192C';
       showAlert("Dark mode has been enabled", "success");
+      document.title = 'Textify - Dark Mode';
+
+      // setInterval(() => {
+      //   document.title = 'Textify is Amazing App';
+      // }, 2000);
+      // setInterval(() => {
+      //   document.title = 'Install Textify Now';
+      // }, 1500);
+
     }
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success");
+      document.title = 'Textify - Light Mode';
     }
   } 
   return (
