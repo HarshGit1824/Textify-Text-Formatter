@@ -2,14 +2,17 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
   
+
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Text converted to uppercase", "success");
   };
 
   const handleLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Text converted to lowercase", "success");
   };
 
   const handleCapitalizeClick = () => {
@@ -18,11 +21,13 @@ export default function TextForm(props) {
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
       .join(" ");
     setText(newText);
+    props.showAlert("Text capitalized", "success");
   };
 
   const handleReverseClick = () => {
     let newText = text.split("").reverse().join("");
     setText(newText);
+    props.showAlert("Text reversed", "success");
   };
 
   // Inverse case logic
@@ -38,21 +43,26 @@ export default function TextForm(props) {
       })
       .join("");
     setText(newText);
+    props.showAlert("Text case inverted", "success");
   };
 
   const handleClearClick = () => {
     setText("");
+    props.showAlert("Text cleared successfully", "success");
   };
 
   const handleRemoveSpacesClick = () => {
     let newText = text.split(/[ ]+/).join(" ");
     setText(newText);
+    props.showAlert("Extra spaces removed", "success");
   };
 
   const handleCopyClick = () => {
     navigator.clipboard.writeText(text);
     alert("Copied to clipboard!");
+    props.showAlert("Text copied to clipboard", "primary");
   };
+
 
 
   const handleOnChange = (event) => {
