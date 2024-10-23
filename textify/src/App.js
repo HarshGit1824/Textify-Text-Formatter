@@ -139,8 +139,12 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter your text and select the case you want to convert it to." mode={mode} />} />
+
+            {/* /users --> Component 1
+            /users/Home --> Component 2 */}
+            {/* exact matching */}
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter your text and select the case you want to convert it to." mode={mode} />} />
           </Routes>
         </div>
       </Router>
