@@ -115,7 +115,7 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
-      document.body.style.backgroundColor = "#0B192C";
+      document.body.style.backgroundColor = "#000";
       showAlert("Dark mode has been enabled", "success");
       document.title = "Textify - Dark Mode";
     } else {

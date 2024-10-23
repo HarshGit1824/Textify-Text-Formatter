@@ -86,7 +86,7 @@ export default function TextForm(props) {
             placeholder="Enter text here and try the formatting options below..."
             value={text}
             onChange={handleOnChange}
-            style={{backgroundColor: props.mode=== 'dark'?'grey':'white', color: props.mode=== 'dark'?'white':'#0B192C'}}
+            style={{backgroundColor: props.mode=== 'dark'?'grey':'white', color: props.mode=== 'dark'?'white':'#000'}}
             id="myBox"
             rows="7"
           ></textarea>
@@ -126,7 +126,7 @@ export default function TextForm(props) {
       </div>
 
       {/* Summary Section */}
-      <div className="container my-2" style={{color: props.mode=== 'dark'?'white':'#0B192C'}}>
+      <div className="container my-2" style={{color: props.mode=== 'dark'?'white':'#000'}}>
         <h2>Your Text Summary</h2>
         <p>
           {/* <p>{text.split(" ").length} Words & {text.length} Characters</p>
