@@ -20,6 +20,14 @@ textarea {
   color: #444;
 }
 
+textarea::placeholder {
+  color: #6c757d; /* Default placeholder color for light mode */
+}
+
+textarea.dark-mode::placeholder {
+  color: white; /* White placeholder text for dark mode */
+}
+
 button {
   font-family: 'Teachers', serif;
   font-weight: 400;
